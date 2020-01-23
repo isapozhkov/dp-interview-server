@@ -1,0 +1,9 @@
+{
+  "name": "dp-interview-server",
+  "version": "1.0.0",
+  "description": "DriverPack interview test: API server",
+  "main": "index.js",
+  "repository": "https://github.com/isapozhkov/dp-interview-server.git",
+  "author": "Sapozhkov Ivan",
+  "license": "MIT"
+}
