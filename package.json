@@ -7,13 +7,15 @@
   "author": "Sapozhkov Ivan",
   "license": "MIT",
   "scripts": {
-    "dev": "node-dev --respawn src/index.js"
+    "dev": "dotenv -- node-dev --respawn src/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fuse.js": "^3.4.6",
+    "lodash.foreach": "^4.5.0"
   },
   "devDependencies": {
     "dotenv-cli": "^3.1.0",
