@@ -5,5 +5,18 @@
   "main": "index.js",
   "repository": "https://github.com/isapozhkov/dp-interview-server.git",
   "author": "Sapozhkov Ivan",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "node-dev --respawn src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^3.1.0",
+    "node-dev": "^4.0.0"
+  }
 }
