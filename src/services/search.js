@@ -16,11 +16,11 @@ const data = require('./data/sample-data.json');
 const options = {
   shouldSort: true,
   includeScore: true,
-  threshold: 0.5,
+  threshold: 0.6,
   location: 0,
   distance: 200,
-  maxPatternLength: 32,
-  minMatchCharLength: 1,
+  maxPatternLength: 64,
+  minMatchCharLength: 6,
   keys: [
     "symptom"
   ]
@@ -32,7 +32,7 @@ function searchSolution(problem) {
     const f = new fuse(v, options);
     res.push(...f.search(problem).map(v => ({ tag: k, score: v.score, ...v.item })));
   });
-  return res;
+  return res.sort((a, b) => a.score - b.score);
 }
 
 module.exports = { searchSolution };
