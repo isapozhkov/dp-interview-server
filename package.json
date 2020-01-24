@@ -7,7 +7,9 @@
   "author": "Sapozhkov Ivan",
   "license": "MIT",
   "scripts": {
-    "dev": "dotenv -- node-dev --respawn src/index.js"
+    "dev": "dotenv -- node-dev --respawn src/index.js",
+    "build": "rm -rf dist && webpack --mode production",
+    "start": "node ./dist/server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -18,7 +20,13 @@
     "lodash.foreach": "^4.5.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-loader": "^8.0.6",
     "dotenv-cli": "^3.1.0",
-    "node-dev": "^4.0.0"
+    "node-dev": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
